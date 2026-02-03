@@ -5,8 +5,8 @@ import CoreConcept from "./components/CoreConcept/CoreConcept";
 import TabButton from "./components/TabButton/TabButton";
 
 function App() {
-    function handleSelect() {
-        console.log('Hello World !');
+    function handleClick(selectedButton) {
+        console.log(selectedButton);
     }
 
     return (
@@ -30,10 +30,10 @@ function App() {
                 <section id="examples">
                     <h2>Examples</h2>
                     <menu>
-                        <TabButton onSelect={handleSelect}>Components</TabButton>
-                        <TabButton onSelect={handleSelect}>JSX</TabButton>
-                        <TabButton onSelect={handleSelect}>Props</TabButton>
-                        <TabButton onSelect={handleSelect}>State</TabButton>
+                        <TabButton onClick={() => handleClick('components')}>Components</TabButton>
+                        <TabButton onClick={() => handleClick('jsx')}>JSX</TabButton>
+                        <TabButton onClick={() => handleClick('props')}>Props</TabButton>
+                        <TabButton onClick={() => handleClick('state')}>State</TabButton>
                     </menu>
 
                     Dynamic Content
