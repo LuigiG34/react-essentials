@@ -1,7 +1,7 @@
-export default function TabButton({children, onClick, isSelected}) {
+export default function TabButton({children, isSelected, ...rest}) {
     return (
         <li>
-            <button className={isSelected ? "active" : ''} onClick={onClick}>{children}</button>
+            <button className={isSelected ? "active" : ''} {...rest}>{children}</button>
         </li>
     );
 }
